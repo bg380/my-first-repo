@@ -1,3 +1,5 @@
+#this is some text that Basma has added to the file 
+
 #reproducible research, intro to set up
 
 #https://cambiotraining.github.io/reproducibility-training/
