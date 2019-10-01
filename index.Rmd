@@ -1,3 +1,58 @@
+#reproducible research, intro to set up
+
+#https://cambiotraining.github.io/reproducibility-training/
+#Example: RNotebookExample
+
+
+setwd(R/Reproducible_research")
+
+#often no link between data and script --> makes replicating study challenging. More journals are
+#requiring submissions of scripts with publication
+
+#reproducible research can be done through literate programming and version control
+
+#literate programming:
+#incorporating code inside report --> links data and code
+#R notebooks: allows to generate code and produce a report
+#R Markdown: language used to create R notebooks
+#R code is integrated in Markdown language, which is converted into HTML and compromise the report
+#In reality, Notebook is created in Rmd file (R mark down), uses a package called called knitr which converses it into md (Markdown)
+# the md file is converted into HTML by pandoc
+
+#create new project and pick simple R markdown website (here named site.yml)
+#to avoid issues with working directories, easiest to pick associate with existing working directory
+#creates three files aoutomatically and a website with two tabs: site.yml, about.Rmd, index.Rmd
+#site.yml: name of project, is the website
+#can change the title of the website, e.g. "my notebook" by changing the name in the name and main title 
+
+#can edit the names of the tabs and edit their names in the project file site.yml
+#tab called home linked with index.html and a file called about linked to about.html
+#to build website, go to tab buildin  the top right corner
+#to view website, can use knit (above script, updates website you are working with) or build website (updates project)
+
+#if click build website, can see the two tabs "about" and "index". 
+#can change the title of the tabs in text
+
+#can add another tab
+#by adding additional line including text: and href:
+#then create new folder in files in working directory (right hand corner) with the same name and save as .Rmd file (here analysis.Rmd)
+
+- text: "analysis"
+href: analysis.html
+#To be able to start editing it, need to creade Rmd file for it first
+#in the file, remove the line "output" as otherwise interfers the other sites saved as notebook not as an hdml
+
+#the working directory:
+#all files are kept in this folder
+#specify where to save your files when creating project
+#By saving all files in the working directory using a relative path, do not have to
+#specify the absolute path to the working directory every time
+
+#for reproducibilty, always use relative paths by working from working directory and assuming other people will
+#within working directory, have a folder for data, one for figures and one for project
+
+#to enter text in rmd file that does not show in output file, use <!--enter text here-->
+
 <!--1.the main heading (Title, author, date) between --- ... ---
 quotation marks not required for text
 
